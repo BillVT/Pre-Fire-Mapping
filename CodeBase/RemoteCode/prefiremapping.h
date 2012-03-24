@@ -1,6 +1,7 @@
 /* ********************************************************************** */
 /*                      Pre-Fire Mapping System                           */
 /*                      Main Program Code Header                          */
+/*                            Remote Unit                                 */
 /*                                                                        */
 /* Authors : William Etter (MSE '11)                                      */
 /*                                                                        */
@@ -11,10 +12,13 @@
 /* Hardware : Hoyuko Laser RangeFinder, Pandaboard                        */
 /* Copyright William Etter 2011 (Etterw@seas.upenn.edu)                   */
 /* ********************************************************************** */
+#ifndef _PREFIREMAPPING_H_
+#define _PREFIREMAPPING_H_
 
 /* ****************************************************************************** */
 /* ****************************** Includes ************************************** */
 /* ****************************************************************************** */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -22,6 +26,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <string.h>
+#include "hokuyo_comm.h"
+#include "hokuyo.h"
 
 /* ****************************************************************************** */
 /* *****************************   Definitions  ********************************* */
@@ -119,7 +125,7 @@ uint16_t data[740];
 #define REMBLOCK 36
 
 
-
+#endif
 /* ****************************************************************************** */
 // End of PREFIREMAPPING.H
 /* ****************************************************************************** */

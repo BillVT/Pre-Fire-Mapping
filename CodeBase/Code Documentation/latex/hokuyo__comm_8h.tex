@@ -1,0 +1,80 @@
+\hypertarget{hokuyo__comm_8h}{
+\section{RemoteCode/hokuyo\_\-comm.h File Reference}
+\label{hokuyo__comm_8h}\index{RemoteCode/hokuyo\_\-comm.h@{RemoteCode/hokuyo\_\-comm.h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{hokuyo__comm_8h_aa619e9f0b76b7244e22693e5778c8c2a}{twocharEncode} (uint16\_\-t input, char $\ast$output)
+\item 
+void \hyperlink{hokuyo__comm_8h_af2dc3e1d628df24fdc89e7266156d68c}{twocharDecode} (char $\ast$input, uint16\_\-t $\ast$output)
+\item 
+void \hyperlink{hokuyo__comm_8h_a6cee44b850ad5d8ba35daf85d057a004}{threecharEncode} (uint16\_\-t input, char $\ast$output)
+\item 
+void \hyperlink{hokuyo__comm_8h_ae658773cc2abf6101a9ed1ae753666fd}{threecharDecode} (char $\ast$input, uint16\_\-t $\ast$output)
+\item 
+void \hyperlink{hokuyo__comm_8h_ae79b2376729aa11d35d56e387de0fde5}{fourcharEncode} (uint32\_\-t input, char $\ast$output)
+\item 
+void \hyperlink{hokuyo__comm_8h_ac366de5712064c47aa49caeeb230f56b}{fourcharDecode} (char $\ast$input, uint32\_\-t $\ast$output)
+\item 
+uint8\_\-t \hyperlink{hokuyo__comm_8h_a48beda652b3891256a1111b75aac0ad3}{checkSum} (char $\ast$input, int length)
+\item 
+uint8\_\-t \hyperlink{hokuyo__comm_8h_a3ee80042e7f6973cd563ec5f611a90ab}{commandNumber} (char $\ast$input)
+\item 
+int \hyperlink{hokuyo__comm_8h_a727949da4745e4762393eb6da7294447}{computeTime} (char $\ast$input)
+\item 
+void \hyperlink{hokuyo__comm_8h_ab26bf04278b9ee7f3aeffe52e05b9091}{readData} (uint8\_\-t encoding, uint32\_\-t \hyperlink{hokuyo_8c_a937ebdcce0ae11e96ec89abe94db402c}{startstep}, uint32\_\-t \hyperlink{hokuyo_8c_a63e3e8ecdfed693b86dca2408ada45d8}{endstep}, uint32\_\-t cluster, uint32\_\-t \hyperlink{hokuyo_8c_af2ddde5be5299be7006e46c38fd77976}{scaninterval}, FILE $\ast$filedescriptor)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{hokuyo__comm_8h_a48beda652b3891256a1111b75aac0ad3}{
+\index{hokuyo\_\-comm.h@{hokuyo\_\-comm.h}!checkSum@{checkSum}}
+\index{checkSum@{checkSum}!hokuyo_comm.h@{hokuyo\_\-comm.h}}
+\subsubsection[{checkSum}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t checkSum (char $\ast$ {\em input}, \/  int {\em length})}}
+\label{hokuyo__comm_8h_a48beda652b3891256a1111b75aac0ad3}
+\hypertarget{hokuyo__comm_8h_a3ee80042e7f6973cd563ec5f611a90ab}{
+\index{hokuyo\_\-comm.h@{hokuyo\_\-comm.h}!commandNumber@{commandNumber}}
+\index{commandNumber@{commandNumber}!hokuyo_comm.h@{hokuyo\_\-comm.h}}
+\subsubsection[{commandNumber}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t commandNumber (char $\ast$ {\em input})}}
+\label{hokuyo__comm_8h_a3ee80042e7f6973cd563ec5f611a90ab}
+\hypertarget{hokuyo__comm_8h_a727949da4745e4762393eb6da7294447}{
+\index{hokuyo\_\-comm.h@{hokuyo\_\-comm.h}!computeTime@{computeTime}}
+\index{computeTime@{computeTime}!hokuyo_comm.h@{hokuyo\_\-comm.h}}
+\subsubsection[{computeTime}]{\setlength{\rightskip}{0pt plus 5cm}int computeTime (char $\ast$ {\em input})}}
+\label{hokuyo__comm_8h_a727949da4745e4762393eb6da7294447}
+\hypertarget{hokuyo__comm_8h_ac366de5712064c47aa49caeeb230f56b}{
+\index{hokuyo\_\-comm.h@{hokuyo\_\-comm.h}!fourcharDecode@{fourcharDecode}}
+\index{fourcharDecode@{fourcharDecode}!hokuyo_comm.h@{hokuyo\_\-comm.h}}
+\subsubsection[{fourcharDecode}]{\setlength{\rightskip}{0pt plus 5cm}void fourcharDecode (char $\ast$ {\em input}, \/  uint32\_\-t $\ast$ {\em output})}}
+\label{hokuyo__comm_8h_ac366de5712064c47aa49caeeb230f56b}
+\hypertarget{hokuyo__comm_8h_ae79b2376729aa11d35d56e387de0fde5}{
+\index{hokuyo\_\-comm.h@{hokuyo\_\-comm.h}!fourcharEncode@{fourcharEncode}}
+\index{fourcharEncode@{fourcharEncode}!hokuyo_comm.h@{hokuyo\_\-comm.h}}
+\subsubsection[{fourcharEncode}]{\setlength{\rightskip}{0pt plus 5cm}void fourcharEncode (uint32\_\-t {\em input}, \/  char $\ast$ {\em output})}}
+\label{hokuyo__comm_8h_ae79b2376729aa11d35d56e387de0fde5}
+\hypertarget{hokuyo__comm_8h_ab26bf04278b9ee7f3aeffe52e05b9091}{
+\index{hokuyo\_\-comm.h@{hokuyo\_\-comm.h}!readData@{readData}}
+\index{readData@{readData}!hokuyo_comm.h@{hokuyo\_\-comm.h}}
+\subsubsection[{readData}]{\setlength{\rightskip}{0pt plus 5cm}void readData (uint8\_\-t {\em encoding}, \/  uint32\_\-t {\em startstep}, \/  uint32\_\-t {\em endstep}, \/  uint32\_\-t {\em cluster}, \/  uint32\_\-t {\em scaninterval}, \/  FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo__comm_8h_ab26bf04278b9ee7f3aeffe52e05b9091}
+\hypertarget{hokuyo__comm_8h_ae658773cc2abf6101a9ed1ae753666fd}{
+\index{hokuyo\_\-comm.h@{hokuyo\_\-comm.h}!threecharDecode@{threecharDecode}}
+\index{threecharDecode@{threecharDecode}!hokuyo_comm.h@{hokuyo\_\-comm.h}}
+\subsubsection[{threecharDecode}]{\setlength{\rightskip}{0pt plus 5cm}void threecharDecode (char $\ast$ {\em input}, \/  uint16\_\-t $\ast$ {\em output})}}
+\label{hokuyo__comm_8h_ae658773cc2abf6101a9ed1ae753666fd}
+\hypertarget{hokuyo__comm_8h_a6cee44b850ad5d8ba35daf85d057a004}{
+\index{hokuyo\_\-comm.h@{hokuyo\_\-comm.h}!threecharEncode@{threecharEncode}}
+\index{threecharEncode@{threecharEncode}!hokuyo_comm.h@{hokuyo\_\-comm.h}}
+\subsubsection[{threecharEncode}]{\setlength{\rightskip}{0pt plus 5cm}void threecharEncode (uint16\_\-t {\em input}, \/  char $\ast$ {\em output})}}
+\label{hokuyo__comm_8h_a6cee44b850ad5d8ba35daf85d057a004}
+\hypertarget{hokuyo__comm_8h_af2dc3e1d628df24fdc89e7266156d68c}{
+\index{hokuyo\_\-comm.h@{hokuyo\_\-comm.h}!twocharDecode@{twocharDecode}}
+\index{twocharDecode@{twocharDecode}!hokuyo_comm.h@{hokuyo\_\-comm.h}}
+\subsubsection[{twocharDecode}]{\setlength{\rightskip}{0pt plus 5cm}void twocharDecode (char $\ast$ {\em input}, \/  uint16\_\-t $\ast$ {\em output})}}
+\label{hokuyo__comm_8h_af2dc3e1d628df24fdc89e7266156d68c}
+\hypertarget{hokuyo__comm_8h_aa619e9f0b76b7244e22693e5778c8c2a}{
+\index{hokuyo\_\-comm.h@{hokuyo\_\-comm.h}!twocharEncode@{twocharEncode}}
+\index{twocharEncode@{twocharEncode}!hokuyo_comm.h@{hokuyo\_\-comm.h}}
+\subsubsection[{twocharEncode}]{\setlength{\rightskip}{0pt plus 5cm}void twocharEncode (uint16\_\-t {\em input}, \/  char $\ast$ {\em output})}}
+\label{hokuyo__comm_8h_aa619e9f0b76b7244e22693e5778c8c2a}

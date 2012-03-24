@@ -1,0 +1,115 @@
+\hypertarget{prefiremapping_8h}{
+\section{RemoteCode/prefiremapping.h File Reference}
+\label{prefiremapping_8h}\index{RemoteCode/prefiremapping.h@{RemoteCode/prefiremapping.h}}
+}
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include $<$math.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include \char`\"{}hokuyo\_\-comm.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}hokuyo.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{prefiremapping_8h_a20e60cd62eeb5eaf5de1922dc2023039}{DEBUGGING\_\-MODE}~0
+\item 
+\#define \hyperlink{prefiremapping_8h_ad5755cfbc5c4b61d5a5b88782eee01e8}{VERBOSE\_\-MODE}~1
+\item 
+\#define \hyperlink{prefiremapping_8h_a616e93c1e39ae7cddc5538909b0784aa}{OPEN\_\-WAIT}~1000000
+\item 
+\#define \hyperlink{prefiremapping_8h_a12f4cc5f911f95a92a045d3b677f0ce1}{REMBLOCK}~36
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{prefiremapping_8h_a540c0b4e7d398c31890f62ad69cd551c}{problem}
+\item 
+int \hyperlink{prefiremapping_8h_a6e27f49150e9a14580fb313cc2777e00}{status}
+\item 
+int \hyperlink{prefiremapping_8h_af17f2cb54d640531a55a9903b3ad9841}{START\_\-STEP}
+\item 
+int \hyperlink{prefiremapping_8h_aa8e15f18a37d261d10cab9a732dfbc10}{END\_\-STEP}
+\item 
+int \hyperlink{prefiremapping_8h_a2ca0f6ae32124667264b8750cc89f6ab}{CLUSTER\_\-COUNT}
+\item 
+int \hyperlink{prefiremapping_8h_ad7f765a279214788fd05bb6e71148fac}{SCAN\_\-INTERVAL}
+\item 
+int \hyperlink{prefiremapping_8h_a0cf23a22c65522ee211d29c279e6cd1b}{LIDAR\_\-OPEN}
+\item 
+uint32\_\-t \hyperlink{prefiremapping_8h_adb59ab53e273917518bc1931317c6000}{lidar\_\-time}
+\item 
+uint16\_\-t \hyperlink{prefiremapping_8h_aa073bf30cfdecd412134519d0503d172}{data} \mbox{[}740\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{prefiremapping_8h_a20e60cd62eeb5eaf5de1922dc2023039}{
+\index{prefiremapping.h@{prefiremapping.h}!DEBUGGING\_\-MODE@{DEBUGGING\_\-MODE}}
+\index{DEBUGGING\_\-MODE@{DEBUGGING\_\-MODE}!prefiremapping.h@{prefiremapping.h}}
+\subsubsection[{DEBUGGING\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DEBUGGING\_\-MODE~0}}
+\label{prefiremapping_8h_a20e60cd62eeb5eaf5de1922dc2023039}
+\hypertarget{prefiremapping_8h_a616e93c1e39ae7cddc5538909b0784aa}{
+\index{prefiremapping.h@{prefiremapping.h}!OPEN\_\-WAIT@{OPEN\_\-WAIT}}
+\index{OPEN\_\-WAIT@{OPEN\_\-WAIT}!prefiremapping.h@{prefiremapping.h}}
+\subsubsection[{OPEN\_\-WAIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPEN\_\-WAIT~1000000}}
+\label{prefiremapping_8h_a616e93c1e39ae7cddc5538909b0784aa}
+\hypertarget{prefiremapping_8h_a12f4cc5f911f95a92a045d3b677f0ce1}{
+\index{prefiremapping.h@{prefiremapping.h}!REMBLOCK@{REMBLOCK}}
+\index{REMBLOCK@{REMBLOCK}!prefiremapping.h@{prefiremapping.h}}
+\subsubsection[{REMBLOCK}]{\setlength{\rightskip}{0pt plus 5cm}\#define REMBLOCK~36}}
+\label{prefiremapping_8h_a12f4cc5f911f95a92a045d3b677f0ce1}
+\hypertarget{prefiremapping_8h_ad5755cfbc5c4b61d5a5b88782eee01e8}{
+\index{prefiremapping.h@{prefiremapping.h}!VERBOSE\_\-MODE@{VERBOSE\_\-MODE}}
+\index{VERBOSE\_\-MODE@{VERBOSE\_\-MODE}!prefiremapping.h@{prefiremapping.h}}
+\subsubsection[{VERBOSE\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define VERBOSE\_\-MODE~1}}
+\label{prefiremapping_8h_ad5755cfbc5c4b61d5a5b88782eee01e8}
+
+
+\subsection{Variable Documentation}
+\hypertarget{prefiremapping_8h_a2ca0f6ae32124667264b8750cc89f6ab}{
+\index{prefiremapping.h@{prefiremapping.h}!CLUSTER\_\-COUNT@{CLUSTER\_\-COUNT}}
+\index{CLUSTER\_\-COUNT@{CLUSTER\_\-COUNT}!prefiremapping.h@{prefiremapping.h}}
+\subsubsection[{CLUSTER\_\-COUNT}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf CLUSTER\_\-COUNT}}}
+\label{prefiremapping_8h_a2ca0f6ae32124667264b8750cc89f6ab}
+\hypertarget{prefiremapping_8h_aa073bf30cfdecd412134519d0503d172}{
+\index{prefiremapping.h@{prefiremapping.h}!data@{data}}
+\index{data@{data}!prefiremapping.h@{prefiremapping.h}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf data}\mbox{[}740\mbox{]}}}
+\label{prefiremapping_8h_aa073bf30cfdecd412134519d0503d172}
+\hypertarget{prefiremapping_8h_aa8e15f18a37d261d10cab9a732dfbc10}{
+\index{prefiremapping.h@{prefiremapping.h}!END\_\-STEP@{END\_\-STEP}}
+\index{END\_\-STEP@{END\_\-STEP}!prefiremapping.h@{prefiremapping.h}}
+\subsubsection[{END\_\-STEP}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf END\_\-STEP}}}
+\label{prefiremapping_8h_aa8e15f18a37d261d10cab9a732dfbc10}
+\hypertarget{prefiremapping_8h_a0cf23a22c65522ee211d29c279e6cd1b}{
+\index{prefiremapping.h@{prefiremapping.h}!LIDAR\_\-OPEN@{LIDAR\_\-OPEN}}
+\index{LIDAR\_\-OPEN@{LIDAR\_\-OPEN}!prefiremapping.h@{prefiremapping.h}}
+\subsubsection[{LIDAR\_\-OPEN}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf LIDAR\_\-OPEN}}}
+\label{prefiremapping_8h_a0cf23a22c65522ee211d29c279e6cd1b}
+\hypertarget{prefiremapping_8h_adb59ab53e273917518bc1931317c6000}{
+\index{prefiremapping.h@{prefiremapping.h}!lidar\_\-time@{lidar\_\-time}}
+\index{lidar\_\-time@{lidar\_\-time}!prefiremapping.h@{prefiremapping.h}}
+\subsubsection[{lidar\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf lidar\_\-time}}}
+\label{prefiremapping_8h_adb59ab53e273917518bc1931317c6000}
+\hypertarget{prefiremapping_8h_a540c0b4e7d398c31890f62ad69cd551c}{
+\index{prefiremapping.h@{prefiremapping.h}!problem@{problem}}
+\index{problem@{problem}!prefiremapping.h@{prefiremapping.h}}
+\subsubsection[{problem}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf problem}}}
+\label{prefiremapping_8h_a540c0b4e7d398c31890f62ad69cd551c}
+\hypertarget{prefiremapping_8h_ad7f765a279214788fd05bb6e71148fac}{
+\index{prefiremapping.h@{prefiremapping.h}!SCAN\_\-INTERVAL@{SCAN\_\-INTERVAL}}
+\index{SCAN\_\-INTERVAL@{SCAN\_\-INTERVAL}!prefiremapping.h@{prefiremapping.h}}
+\subsubsection[{SCAN\_\-INTERVAL}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf SCAN\_\-INTERVAL}}}
+\label{prefiremapping_8h_ad7f765a279214788fd05bb6e71148fac}
+\hypertarget{prefiremapping_8h_af17f2cb54d640531a55a9903b3ad9841}{
+\index{prefiremapping.h@{prefiremapping.h}!START\_\-STEP@{START\_\-STEP}}
+\index{START\_\-STEP@{START\_\-STEP}!prefiremapping.h@{prefiremapping.h}}
+\subsubsection[{START\_\-STEP}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf START\_\-STEP}}}
+\label{prefiremapping_8h_af17f2cb54d640531a55a9903b3ad9841}
+\hypertarget{prefiremapping_8h_a6e27f49150e9a14580fb313cc2777e00}{
+\index{prefiremapping.h@{prefiremapping.h}!status@{status}}
+\index{status@{status}!prefiremapping.h@{prefiremapping.h}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf status}}}
+\label{prefiremapping_8h_a6e27f49150e9a14580fb313cc2777e00}

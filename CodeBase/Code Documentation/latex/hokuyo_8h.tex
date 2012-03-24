@@ -1,0 +1,184 @@
+\hypertarget{hokuyo_8h}{
+\section{RemoteCode/hokuyo.h File Reference}
+\label{hokuyo_8h}\index{RemoteCode/hokuyo.h@{RemoteCode/hokuyo.h}}
+}
+{\ttfamily \#include \char`\"{}hokuyo\_\-comm.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+FILE $\ast$ \hyperlink{hokuyo_8h_ae0c361eb41a4d12353c701d8d78fcb6d}{lidar\_\-open} (char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Move a chess piece Precondition: it's the owner's turn and the move is valid. Postcondition: the piece will be moved. \item\end{DoxyCompactList}\item 
+int \hyperlink{hokuyo_8h_a1dba0ae376b91698ab2a1a03c523ca6c}{lidar\_\-close} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_a7aaf644064237a7c98e4ab6c278fad2c}{lidar\_\-flush} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_a51038167eb04fe10bee9357e04c8ab91}{lidar\_\-sendMD} (FILE $\ast$filedescriptor, int scannum)
+\item 
+void \hyperlink{hokuyo_8h_a23e8c4a573bbf2c701da2a3a8a4077f8}{lidar\_\-sendMS} (FILE $\ast$filedescriptor, int scannum)
+\item 
+void \hyperlink{hokuyo_8h_ada19915c1007a274298ede7a511b3fbb}{lidar\_\-contiuousScanMD} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_a7077014e0596d9b841703238a4068fe7}{lidar\_\-contiuousScanMS} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_a6775c08ceffa8ed768a2b64b2fa4d0dc}{lidar\_\-sendGD} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_a4614053174aab891cb55c68b79c01a37}{lidar\_\-sendGS} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_a4432910ad1b322b772053bc066f000f7}{lidar\_\-laserON} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_a5f49121e323114b818e3e8b4c95294bc}{lidar\_\-laserOFF} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_a412445787fb6d4b80e6442d3764d9b6a}{lidar\_\-RESET} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_a4734fc7464ceeccab3f05919226ad480}{lidar\_\-adjustON} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_a501e286e45bb3cbd237eade5662de303}{lidar\_\-adjustTIME} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_ae9df156cc74ef0452dcb09311256f078}{lidar\_\-adjustOFF} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_ac5a05712e57aa7309580e2ad02f4279e}{lidar\_\-bitRate} (FILE $\ast$filedescriptor, int \hyperlink{hokuyo_8c_a218b4f7c6cc2681a99c23a3b089d68b1}{speed})
+\item 
+void \hyperlink{hokuyo_8h_aa2a498807cdbe4a134a08513189883b6}{lidar\_\-motorSpeed} (FILE $\ast$filedescriptor, int \hyperlink{hokuyo_8c_a218b4f7c6cc2681a99c23a3b089d68b1}{speed})
+\item 
+void \hyperlink{hokuyo_8h_a43868d1b29a1ad5a58f9b23b92aec438}{lidar\_\-sensitivity} (FILE $\ast$filedescriptor, int sensitivity)
+\item 
+void \hyperlink{hokuyo_8h_aeca080effba6a612226ab71db8935252}{lidar\_\-malfunctionSim} (FILE $\ast$filedescriptor, int malfunction)
+\item 
+void \hyperlink{hokuyo_8h_a447bf4666c964531c08cc84039d8575d}{lidar\_\-version} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_a719c19d00b834b842d041b6cfc29458f}{lidar\_\-specs} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_abe7b7a1251bd3668d9364b747a5c891d}{lidar\_\-state} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8h_a040b1bad90ab94de770aab3a74af89c7}{lidar\_\-read} (FILE $\ast$filedescriptor)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{hokuyo_8h_ae9df156cc74ef0452dcb09311256f078}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-adjustOFF@{lidar\_\-adjustOFF}}
+\index{lidar\_\-adjustOFF@{lidar\_\-adjustOFF}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-adjustOFF}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-adjustOFF (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_ae9df156cc74ef0452dcb09311256f078}
+\hypertarget{hokuyo_8h_a4734fc7464ceeccab3f05919226ad480}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-adjustON@{lidar\_\-adjustON}}
+\index{lidar\_\-adjustON@{lidar\_\-adjustON}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-adjustON}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-adjustON (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_a4734fc7464ceeccab3f05919226ad480}
+\hypertarget{hokuyo_8h_a501e286e45bb3cbd237eade5662de303}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-adjustTIME@{lidar\_\-adjustTIME}}
+\index{lidar\_\-adjustTIME@{lidar\_\-adjustTIME}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-adjustTIME}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-adjustTIME (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_a501e286e45bb3cbd237eade5662de303}
+\hypertarget{hokuyo_8h_ac5a05712e57aa7309580e2ad02f4279e}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-bitRate@{lidar\_\-bitRate}}
+\index{lidar\_\-bitRate@{lidar\_\-bitRate}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-bitRate}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-bitRate (FILE $\ast$ {\em filedescriptor}, \/  int {\em speed})}}
+\label{hokuyo_8h_ac5a05712e57aa7309580e2ad02f4279e}
+\hypertarget{hokuyo_8h_a1dba0ae376b91698ab2a1a03c523ca6c}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-close@{lidar\_\-close}}
+\index{lidar\_\-close@{lidar\_\-close}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}int lidar\_\-close (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_a1dba0ae376b91698ab2a1a03c523ca6c}
+\hypertarget{hokuyo_8h_ada19915c1007a274298ede7a511b3fbb}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-contiuousScanMD@{lidar\_\-contiuousScanMD}}
+\index{lidar\_\-contiuousScanMD@{lidar\_\-contiuousScanMD}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-contiuousScanMD}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-contiuousScanMD (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_ada19915c1007a274298ede7a511b3fbb}
+\hypertarget{hokuyo_8h_a7077014e0596d9b841703238a4068fe7}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-contiuousScanMS@{lidar\_\-contiuousScanMS}}
+\index{lidar\_\-contiuousScanMS@{lidar\_\-contiuousScanMS}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-contiuousScanMS}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-contiuousScanMS (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_a7077014e0596d9b841703238a4068fe7}
+\hypertarget{hokuyo_8h_a7aaf644064237a7c98e4ab6c278fad2c}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-flush@{lidar\_\-flush}}
+\index{lidar\_\-flush@{lidar\_\-flush}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-flush}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-flush (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_a7aaf644064237a7c98e4ab6c278fad2c}
+\hypertarget{hokuyo_8h_a5f49121e323114b818e3e8b4c95294bc}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-laserOFF@{lidar\_\-laserOFF}}
+\index{lidar\_\-laserOFF@{lidar\_\-laserOFF}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-laserOFF}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-laserOFF (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_a5f49121e323114b818e3e8b4c95294bc}
+\hypertarget{hokuyo_8h_a4432910ad1b322b772053bc066f000f7}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-laserON@{lidar\_\-laserON}}
+\index{lidar\_\-laserON@{lidar\_\-laserON}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-laserON}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-laserON (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_a4432910ad1b322b772053bc066f000f7}
+\hypertarget{hokuyo_8h_aeca080effba6a612226ab71db8935252}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-malfunctionSim@{lidar\_\-malfunctionSim}}
+\index{lidar\_\-malfunctionSim@{lidar\_\-malfunctionSim}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-malfunctionSim}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-malfunctionSim (FILE $\ast$ {\em filedescriptor}, \/  int {\em malfunction})}}
+\label{hokuyo_8h_aeca080effba6a612226ab71db8935252}
+\hypertarget{hokuyo_8h_aa2a498807cdbe4a134a08513189883b6}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-motorSpeed@{lidar\_\-motorSpeed}}
+\index{lidar\_\-motorSpeed@{lidar\_\-motorSpeed}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-motorSpeed}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-motorSpeed (FILE $\ast$ {\em filedescriptor}, \/  int {\em speed})}}
+\label{hokuyo_8h_aa2a498807cdbe4a134a08513189883b6}
+\hypertarget{hokuyo_8h_ae0c361eb41a4d12353c701d8d78fcb6d}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-open@{lidar\_\-open}}
+\index{lidar\_\-open@{lidar\_\-open}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}FILE$\ast$ lidar\_\-open (char $\ast$ {\em name})}}
+\label{hokuyo_8h_ae0c361eb41a4d12353c701d8d78fcb6d}
+
+
+Move a chess piece Precondition: it's the owner's turn and the move is valid. Postcondition: the piece will be moved. 
+
+Function: \hyperlink{hokuyo_8c_ae0c361eb41a4d12353c701d8d78fcb6d}{lidar\_\-open()} Purpose: Opens LIDAR Communication and flushes buffer Input: Device name to open Returns: File Descriptor (FD) if successful, -\/1 if not
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em x}]New x square \item[{\em y}]New y square \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the move has been performed 
+\end{DoxyReturn}
+\hypertarget{hokuyo_8h_a040b1bad90ab94de770aab3a74af89c7}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-read@{lidar\_\-read}}
+\index{lidar\_\-read@{lidar\_\-read}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-read (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_a040b1bad90ab94de770aab3a74af89c7}
+\hypertarget{hokuyo_8h_a412445787fb6d4b80e6442d3764d9b6a}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-RESET@{lidar\_\-RESET}}
+\index{lidar\_\-RESET@{lidar\_\-RESET}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-RESET}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-RESET (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_a412445787fb6d4b80e6442d3764d9b6a}
+\hypertarget{hokuyo_8h_a6775c08ceffa8ed768a2b64b2fa4d0dc}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-sendGD@{lidar\_\-sendGD}}
+\index{lidar\_\-sendGD@{lidar\_\-sendGD}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-sendGD}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-sendGD (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_a6775c08ceffa8ed768a2b64b2fa4d0dc}
+\hypertarget{hokuyo_8h_a4614053174aab891cb55c68b79c01a37}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-sendGS@{lidar\_\-sendGS}}
+\index{lidar\_\-sendGS@{lidar\_\-sendGS}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-sendGS}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-sendGS (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_a4614053174aab891cb55c68b79c01a37}
+\hypertarget{hokuyo_8h_a51038167eb04fe10bee9357e04c8ab91}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-sendMD@{lidar\_\-sendMD}}
+\index{lidar\_\-sendMD@{lidar\_\-sendMD}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-sendMD}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-sendMD (FILE $\ast$ {\em filedescriptor}, \/  int {\em scannum})}}
+\label{hokuyo_8h_a51038167eb04fe10bee9357e04c8ab91}
+\hypertarget{hokuyo_8h_a23e8c4a573bbf2c701da2a3a8a4077f8}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-sendMS@{lidar\_\-sendMS}}
+\index{lidar\_\-sendMS@{lidar\_\-sendMS}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-sendMS}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-sendMS (FILE $\ast$ {\em filedescriptor}, \/  int {\em scannum})}}
+\label{hokuyo_8h_a23e8c4a573bbf2c701da2a3a8a4077f8}
+\hypertarget{hokuyo_8h_a43868d1b29a1ad5a58f9b23b92aec438}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-sensitivity@{lidar\_\-sensitivity}}
+\index{lidar\_\-sensitivity@{lidar\_\-sensitivity}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-sensitivity}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-sensitivity (FILE $\ast$ {\em filedescriptor}, \/  int {\em sensitivity})}}
+\label{hokuyo_8h_a43868d1b29a1ad5a58f9b23b92aec438}
+\hypertarget{hokuyo_8h_a719c19d00b834b842d041b6cfc29458f}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-specs@{lidar\_\-specs}}
+\index{lidar\_\-specs@{lidar\_\-specs}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-specs}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-specs (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_a719c19d00b834b842d041b6cfc29458f}
+\hypertarget{hokuyo_8h_abe7b7a1251bd3668d9364b747a5c891d}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-state@{lidar\_\-state}}
+\index{lidar\_\-state@{lidar\_\-state}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-state (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_abe7b7a1251bd3668d9364b747a5c891d}
+\hypertarget{hokuyo_8h_a447bf4666c964531c08cc84039d8575d}{
+\index{hokuyo.h@{hokuyo.h}!lidar\_\-version@{lidar\_\-version}}
+\index{lidar\_\-version@{lidar\_\-version}!hokuyo.h@{hokuyo.h}}
+\subsubsection[{lidar\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-version (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8h_a447bf4666c964531c08cc84039d8575d}

@@ -1,0 +1,429 @@
+\hypertarget{hokuyo_8c}{
+\section{RemoteCode/hokuyo.c File Reference}
+\label{hokuyo_8c}\index{RemoteCode/hokuyo.c@{RemoteCode/hokuyo.c}}
+}
+{\ttfamily \#include \char`\"{}prefiremapping.h\char`\"{}}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include $<$math.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include \char`\"{}hokuyo\_\-comm.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}hokuyo.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+FILE $\ast$ \hyperlink{hokuyo_8c_ae0c361eb41a4d12353c701d8d78fcb6d}{lidar\_\-open} (char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Move a chess piece Precondition: it's the owner's turn and the move is valid. Postcondition: the piece will be moved. \item\end{DoxyCompactList}\item 
+int \hyperlink{hokuyo_8c_a1dba0ae376b91698ab2a1a03c523ca6c}{lidar\_\-close} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_a7aaf644064237a7c98e4ab6c278fad2c}{lidar\_\-flush} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_a51038167eb04fe10bee9357e04c8ab91}{lidar\_\-sendMD} (FILE $\ast$filedescriptor, int scannum)
+\item 
+void \hyperlink{hokuyo_8c_a23e8c4a573bbf2c701da2a3a8a4077f8}{lidar\_\-sendMS} (FILE $\ast$filedescriptor, int scannum)
+\item 
+void \hyperlink{hokuyo_8c_ada19915c1007a274298ede7a511b3fbb}{lidar\_\-contiuousScanMD} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_a7077014e0596d9b841703238a4068fe7}{lidar\_\-contiuousScanMS} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_a6775c08ceffa8ed768a2b64b2fa4d0dc}{lidar\_\-sendGD} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_a4614053174aab891cb55c68b79c01a37}{lidar\_\-sendGS} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_a4432910ad1b322b772053bc066f000f7}{lidar\_\-laserON} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_a5f49121e323114b818e3e8b4c95294bc}{lidar\_\-laserOFF} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_a412445787fb6d4b80e6442d3764d9b6a}{lidar\_\-RESET} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_a4734fc7464ceeccab3f05919226ad480}{lidar\_\-adjustON} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_a501e286e45bb3cbd237eade5662de303}{lidar\_\-adjustTIME} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_ae9df156cc74ef0452dcb09311256f078}{lidar\_\-adjustOFF} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_ac5a05712e57aa7309580e2ad02f4279e}{lidar\_\-bitRate} (FILE $\ast$filedescriptor, int \hyperlink{hokuyo_8c_a218b4f7c6cc2681a99c23a3b089d68b1}{speed})
+\item 
+void \hyperlink{hokuyo_8c_aa2a498807cdbe4a134a08513189883b6}{lidar\_\-motorSpeed} (FILE $\ast$filedescriptor, int \hyperlink{hokuyo_8c_a218b4f7c6cc2681a99c23a3b089d68b1}{speed})
+\item 
+void \hyperlink{hokuyo_8c_a43868d1b29a1ad5a58f9b23b92aec438}{lidar\_\-sensitivity} (FILE $\ast$filedescriptor, int sensitivity)
+\item 
+void \hyperlink{hokuyo_8c_aeca080effba6a612226ab71db8935252}{lidar\_\-malfunctionSim} (FILE $\ast$filedescriptor, int malfunction)
+\item 
+void \hyperlink{hokuyo_8c_a447bf4666c964531c08cc84039d8575d}{lidar\_\-version} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_a719c19d00b834b842d041b6cfc29458f}{lidar\_\-specs} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_abe7b7a1251bd3668d9364b747a5c891d}{lidar\_\-state} (FILE $\ast$filedescriptor)
+\item 
+void \hyperlink{hokuyo_8c_a040b1bad90ab94de770aab3a74af89c7}{lidar\_\-read} (FILE $\ast$filedescriptor)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{hokuyo_8c_a450b03a1f336bc187d60ed1a185c2642}{mdreturn} \mbox{[}19\mbox{]} = \char`\"{}000000000000000000$\backslash$n\char`\"{}
+\item 
+char \hyperlink{hokuyo_8c_a008755f3f160b4bb13a2913c793d12dc}{bmreturn} \mbox{[}6\mbox{]} = \char`\"{}00000$\backslash$n\char`\"{}
+\item 
+char \hyperlink{hokuyo_8c_af0c72bcb3d9f140bff2177c6f10f3054}{qtreturn} \mbox{[}6\mbox{]} = \char`\"{}00000$\backslash$n\char`\"{}
+\item 
+char \hyperlink{hokuyo_8c_a0c756ab5870a4e7c86e449754e8b8ec9}{rsreturn} \mbox{[}6\mbox{]} = \char`\"{}00000$\backslash$n\char`\"{}
+\item 
+char \hyperlink{hokuyo_8c_a0b56f665d3750b49cd468bec13ca511a}{tm1return} \mbox{[}12\mbox{]} = \char`\"{}00000000000$\backslash$n\char`\"{}
+\item 
+char \hyperlink{hokuyo_8c_acc6a428b9aa31cad7d466090ccf17d25}{tmreturn} \mbox{[}6\mbox{]} = \char`\"{}00000$\backslash$n\char`\"{}
+\item 
+char \hyperlink{hokuyo_8c_aa4597990bc557a71b0be7aceb7ab7291}{ssreturn} \mbox{[}6\mbox{]} = \char`\"{}00000$\backslash$n\char`\"{}
+\item 
+char \hyperlink{hokuyo_8c_a0acb75433dd153373bf7982f6d6a3afd}{crreturn} \mbox{[}8\mbox{]} = \char`\"{}000000$\backslash$n\char`\"{}
+\item 
+char \hyperlink{hokuyo_8c_a0532e57da69f2dcb42526267fde8ae4f}{command} \mbox{[}2\mbox{]} = \char`\"{}0$\backslash$n\char`\"{}
+\item 
+uint8\_\-t \hyperlink{hokuyo_8c_a2b82f452b8447b325121dfd9c56833ba}{commnum} = 0
+\item 
+uint32\_\-t \hyperlink{hokuyo_8c_a937ebdcce0ae11e96ec89abe94db402c}{startstep} = 0
+\item 
+char \hyperlink{hokuyo_8c_aa3e0f985e26bacf2a08db25c238ed7aa}{startchar} \mbox{[}4\mbox{]} = \char`\"{}000$\backslash$n\char`\"{}
+\item 
+uint32\_\-t \hyperlink{hokuyo_8c_a63e3e8ecdfed693b86dca2408ada45d8}{endstep} = 0
+\item 
+char \hyperlink{hokuyo_8c_a43e93cbb1ff097eb392d694732e3f2f9}{endchar} \mbox{[}4\mbox{]} = \char`\"{}000$\backslash$n\char`\"{}
+\item 
+uint32\_\-t \hyperlink{hokuyo_8c_ade0aa4c91a99b83d22a19fe0a3a62be3}{clustercount} = 0
+\item 
+char \hyperlink{hokuyo_8c_a88ececb906224ac01ea41dc235b4b4ab}{clusterchar} \mbox{[}2\mbox{]} = \char`\"{}0$\backslash$n\char`\"{}
+\item 
+uint32\_\-t \hyperlink{hokuyo_8c_af2ddde5be5299be7006e46c38fd77976}{scaninterval} = 0
+\item 
+char \hyperlink{hokuyo_8c_acd2d33d5d30e5fbce6b0933ab09fe00f}{scanchar} \mbox{[}1\mbox{]} = \char`\"{}$\backslash$n\char`\"{}
+\item 
+uint32\_\-t \hyperlink{hokuyo_8c_a8bdd0479fd67506cc7fc20f09a7ee1c2}{numscans} = 0
+\item 
+char \hyperlink{hokuyo_8c_a555a4e538609bbbef3895dec89ca3155}{numscanchar} \mbox{[}2\mbox{]} = \char`\"{}0$\backslash$n\char`\"{}
+\item 
+int \hyperlink{hokuyo_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0
+\item 
+char \hyperlink{hokuyo_8c_a69133069b26bc158a7a33d926d4513a1}{statuschar} \mbox{[}2\mbox{]} = \char`\"{}0$\backslash$n\char`\"{}
+\item 
+int \hyperlink{hokuyo_8c_a930b83edda39ee8cfa78dd4574a50bc3}{sum} = 0
+\item 
+char \hyperlink{hokuyo_8c_ad445763ce9fe285dae98adcb696fbdbe}{sumchar} \mbox{[}1\mbox{]} = \char`\"{}$\backslash$n\char`\"{}
+\item 
+size\_\-t \hyperlink{hokuyo_8c_ac65844e11106dd509db7893f26918ba9}{temp}
+\item 
+int \hyperlink{hokuyo_8c_a86db1573aaa5b5a403c0148904505019}{controlcode} = 0
+\item 
+char \hyperlink{hokuyo_8c_a5016fb3300d2842e8524a81e0bd864fb}{controlchar} \mbox{[}1\mbox{]} = \char`\"{}$\backslash$n\char`\"{}
+\item 
+uint8\_\-t \hyperlink{hokuyo_8c_a59eac9627282a484fbaf0aa7aa3b8a9a}{checksum} = 0
+\item 
+char \hyperlink{hokuyo_8c_abedb79759f4a1a8a466ee3e564561bf6}{speedchar} \mbox{[}2\mbox{]} = \char`\"{}0$\backslash$n\char`\"{}
+\item 
+int \hyperlink{hokuyo_8c_a218b4f7c6cc2681a99c23a3b089d68b1}{speed} = 0
+\item 
+char \hyperlink{hokuyo_8c_a84ed35d1d48dd6da374a496521c9dd5f}{tempchar} \mbox{[}1\mbox{]} = \char`\"{}$\backslash$n\char`\"{}
+\item 
+char \hyperlink{hokuyo_8c_a3df5a2c868b650e8cd18fb51e0d2da5c}{statchar1}
+\item 
+char \hyperlink{hokuyo_8c_a78e046077288f9c9dc7f9fa92d5a3ea0}{statchar2}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{hokuyo_8c_ae9df156cc74ef0452dcb09311256f078}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-adjustOFF@{lidar\_\-adjustOFF}}
+\index{lidar\_\-adjustOFF@{lidar\_\-adjustOFF}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-adjustOFF}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-adjustOFF (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_ae9df156cc74ef0452dcb09311256f078}
+\hypertarget{hokuyo_8c_a4734fc7464ceeccab3f05919226ad480}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-adjustON@{lidar\_\-adjustON}}
+\index{lidar\_\-adjustON@{lidar\_\-adjustON}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-adjustON}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-adjustON (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_a4734fc7464ceeccab3f05919226ad480}
+\hypertarget{hokuyo_8c_a501e286e45bb3cbd237eade5662de303}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-adjustTIME@{lidar\_\-adjustTIME}}
+\index{lidar\_\-adjustTIME@{lidar\_\-adjustTIME}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-adjustTIME}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-adjustTIME (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_a501e286e45bb3cbd237eade5662de303}
+\hypertarget{hokuyo_8c_ac5a05712e57aa7309580e2ad02f4279e}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-bitRate@{lidar\_\-bitRate}}
+\index{lidar\_\-bitRate@{lidar\_\-bitRate}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-bitRate}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-bitRate (FILE $\ast$ {\em filedescriptor}, \/  int {\em speed})}}
+\label{hokuyo_8c_ac5a05712e57aa7309580e2ad02f4279e}
+\hypertarget{hokuyo_8c_a1dba0ae376b91698ab2a1a03c523ca6c}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-close@{lidar\_\-close}}
+\index{lidar\_\-close@{lidar\_\-close}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}int lidar\_\-close (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_a1dba0ae376b91698ab2a1a03c523ca6c}
+\hypertarget{hokuyo_8c_ada19915c1007a274298ede7a511b3fbb}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-contiuousScanMD@{lidar\_\-contiuousScanMD}}
+\index{lidar\_\-contiuousScanMD@{lidar\_\-contiuousScanMD}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-contiuousScanMD}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-contiuousScanMD (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_ada19915c1007a274298ede7a511b3fbb}
+\hypertarget{hokuyo_8c_a7077014e0596d9b841703238a4068fe7}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-contiuousScanMS@{lidar\_\-contiuousScanMS}}
+\index{lidar\_\-contiuousScanMS@{lidar\_\-contiuousScanMS}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-contiuousScanMS}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-contiuousScanMS (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_a7077014e0596d9b841703238a4068fe7}
+\hypertarget{hokuyo_8c_a7aaf644064237a7c98e4ab6c278fad2c}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-flush@{lidar\_\-flush}}
+\index{lidar\_\-flush@{lidar\_\-flush}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-flush}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-flush (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_a7aaf644064237a7c98e4ab6c278fad2c}
+\hypertarget{hokuyo_8c_a5f49121e323114b818e3e8b4c95294bc}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-laserOFF@{lidar\_\-laserOFF}}
+\index{lidar\_\-laserOFF@{lidar\_\-laserOFF}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-laserOFF}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-laserOFF (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_a5f49121e323114b818e3e8b4c95294bc}
+\hypertarget{hokuyo_8c_a4432910ad1b322b772053bc066f000f7}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-laserON@{lidar\_\-laserON}}
+\index{lidar\_\-laserON@{lidar\_\-laserON}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-laserON}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-laserON (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_a4432910ad1b322b772053bc066f000f7}
+\hypertarget{hokuyo_8c_aeca080effba6a612226ab71db8935252}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-malfunctionSim@{lidar\_\-malfunctionSim}}
+\index{lidar\_\-malfunctionSim@{lidar\_\-malfunctionSim}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-malfunctionSim}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-malfunctionSim (FILE $\ast$ {\em filedescriptor}, \/  int {\em malfunction})}}
+\label{hokuyo_8c_aeca080effba6a612226ab71db8935252}
+\hypertarget{hokuyo_8c_aa2a498807cdbe4a134a08513189883b6}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-motorSpeed@{lidar\_\-motorSpeed}}
+\index{lidar\_\-motorSpeed@{lidar\_\-motorSpeed}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-motorSpeed}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-motorSpeed (FILE $\ast$ {\em filedescriptor}, \/  int {\em speed})}}
+\label{hokuyo_8c_aa2a498807cdbe4a134a08513189883b6}
+\hypertarget{hokuyo_8c_ae0c361eb41a4d12353c701d8d78fcb6d}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-open@{lidar\_\-open}}
+\index{lidar\_\-open@{lidar\_\-open}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}FILE$\ast$ lidar\_\-open (char $\ast$ {\em name})}}
+\label{hokuyo_8c_ae0c361eb41a4d12353c701d8d78fcb6d}
+
+
+Move a chess piece Precondition: it's the owner's turn and the move is valid. Postcondition: the piece will be moved. 
+
+Function: \hyperlink{hokuyo_8c_ae0c361eb41a4d12353c701d8d78fcb6d}{lidar\_\-open()} Purpose: Opens LIDAR Communication and flushes buffer Input: Device name to open Returns: File Descriptor (FD) if successful, -\/1 if not
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em x}]New x square \item[{\em y}]New y square \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the move has been performed 
+\end{DoxyReturn}
+\hypertarget{hokuyo_8c_a040b1bad90ab94de770aab3a74af89c7}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-read@{lidar\_\-read}}
+\index{lidar\_\-read@{lidar\_\-read}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-read (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_a040b1bad90ab94de770aab3a74af89c7}
+\hypertarget{hokuyo_8c_a412445787fb6d4b80e6442d3764d9b6a}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-RESET@{lidar\_\-RESET}}
+\index{lidar\_\-RESET@{lidar\_\-RESET}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-RESET}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-RESET (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_a412445787fb6d4b80e6442d3764d9b6a}
+\hypertarget{hokuyo_8c_a6775c08ceffa8ed768a2b64b2fa4d0dc}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-sendGD@{lidar\_\-sendGD}}
+\index{lidar\_\-sendGD@{lidar\_\-sendGD}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-sendGD}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-sendGD (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_a6775c08ceffa8ed768a2b64b2fa4d0dc}
+\hypertarget{hokuyo_8c_a4614053174aab891cb55c68b79c01a37}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-sendGS@{lidar\_\-sendGS}}
+\index{lidar\_\-sendGS@{lidar\_\-sendGS}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-sendGS}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-sendGS (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_a4614053174aab891cb55c68b79c01a37}
+\hypertarget{hokuyo_8c_a51038167eb04fe10bee9357e04c8ab91}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-sendMD@{lidar\_\-sendMD}}
+\index{lidar\_\-sendMD@{lidar\_\-sendMD}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-sendMD}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-sendMD (FILE $\ast$ {\em filedescriptor}, \/  int {\em scannum})}}
+\label{hokuyo_8c_a51038167eb04fe10bee9357e04c8ab91}
+\hypertarget{hokuyo_8c_a23e8c4a573bbf2c701da2a3a8a4077f8}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-sendMS@{lidar\_\-sendMS}}
+\index{lidar\_\-sendMS@{lidar\_\-sendMS}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-sendMS}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-sendMS (FILE $\ast$ {\em filedescriptor}, \/  int {\em scannum})}}
+\label{hokuyo_8c_a23e8c4a573bbf2c701da2a3a8a4077f8}
+\hypertarget{hokuyo_8c_a43868d1b29a1ad5a58f9b23b92aec438}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-sensitivity@{lidar\_\-sensitivity}}
+\index{lidar\_\-sensitivity@{lidar\_\-sensitivity}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-sensitivity}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-sensitivity (FILE $\ast$ {\em filedescriptor}, \/  int {\em sensitivity})}}
+\label{hokuyo_8c_a43868d1b29a1ad5a58f9b23b92aec438}
+\hypertarget{hokuyo_8c_a719c19d00b834b842d041b6cfc29458f}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-specs@{lidar\_\-specs}}
+\index{lidar\_\-specs@{lidar\_\-specs}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-specs}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-specs (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_a719c19d00b834b842d041b6cfc29458f}
+\hypertarget{hokuyo_8c_abe7b7a1251bd3668d9364b747a5c891d}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-state@{lidar\_\-state}}
+\index{lidar\_\-state@{lidar\_\-state}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-state (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_abe7b7a1251bd3668d9364b747a5c891d}
+\hypertarget{hokuyo_8c_a447bf4666c964531c08cc84039d8575d}{
+\index{hokuyo.c@{hokuyo.c}!lidar\_\-version@{lidar\_\-version}}
+\index{lidar\_\-version@{lidar\_\-version}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{lidar\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}void lidar\_\-version (FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo_8c_a447bf4666c964531c08cc84039d8575d}
+
+
+\subsection{Variable Documentation}
+\hypertarget{hokuyo_8c_a008755f3f160b4bb13a2913c793d12dc}{
+\index{hokuyo.c@{hokuyo.c}!bmreturn@{bmreturn}}
+\index{bmreturn@{bmreturn}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{bmreturn}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf bmreturn}\mbox{[}6\mbox{]} = \char`\"{}00000$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_a008755f3f160b4bb13a2913c793d12dc}
+\hypertarget{hokuyo_8c_a59eac9627282a484fbaf0aa7aa3b8a9a}{
+\index{hokuyo.c@{hokuyo.c}!checksum@{checksum}}
+\index{checksum@{checksum}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{checksum}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf checksum} = 0}}
+\label{hokuyo_8c_a59eac9627282a484fbaf0aa7aa3b8a9a}
+\hypertarget{hokuyo_8c_a88ececb906224ac01ea41dc235b4b4ab}{
+\index{hokuyo.c@{hokuyo.c}!clusterchar@{clusterchar}}
+\index{clusterchar@{clusterchar}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{clusterchar}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf clusterchar}\mbox{[}2\mbox{]} = \char`\"{}0$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_a88ececb906224ac01ea41dc235b4b4ab}
+\hypertarget{hokuyo_8c_ade0aa4c91a99b83d22a19fe0a3a62be3}{
+\index{hokuyo.c@{hokuyo.c}!clustercount@{clustercount}}
+\index{clustercount@{clustercount}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{clustercount}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf clustercount} = 0}}
+\label{hokuyo_8c_ade0aa4c91a99b83d22a19fe0a3a62be3}
+\hypertarget{hokuyo_8c_a0532e57da69f2dcb42526267fde8ae4f}{
+\index{hokuyo.c@{hokuyo.c}!command@{command}}
+\index{command@{command}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{command}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf command}\mbox{[}2\mbox{]} = \char`\"{}0$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_a0532e57da69f2dcb42526267fde8ae4f}
+\hypertarget{hokuyo_8c_a2b82f452b8447b325121dfd9c56833ba}{
+\index{hokuyo.c@{hokuyo.c}!commnum@{commnum}}
+\index{commnum@{commnum}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{commnum}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf commnum} = 0}}
+\label{hokuyo_8c_a2b82f452b8447b325121dfd9c56833ba}
+\hypertarget{hokuyo_8c_a5016fb3300d2842e8524a81e0bd864fb}{
+\index{hokuyo.c@{hokuyo.c}!controlchar@{controlchar}}
+\index{controlchar@{controlchar}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{controlchar}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf controlchar}\mbox{[}1\mbox{]} = \char`\"{}$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_a5016fb3300d2842e8524a81e0bd864fb}
+\hypertarget{hokuyo_8c_a86db1573aaa5b5a403c0148904505019}{
+\index{hokuyo.c@{hokuyo.c}!controlcode@{controlcode}}
+\index{controlcode@{controlcode}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{controlcode}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf controlcode} = 0}}
+\label{hokuyo_8c_a86db1573aaa5b5a403c0148904505019}
+\hypertarget{hokuyo_8c_a0acb75433dd153373bf7982f6d6a3afd}{
+\index{hokuyo.c@{hokuyo.c}!crreturn@{crreturn}}
+\index{crreturn@{crreturn}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{crreturn}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf crreturn}\mbox{[}8\mbox{]} = \char`\"{}000000$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_a0acb75433dd153373bf7982f6d6a3afd}
+\hypertarget{hokuyo_8c_a43e93cbb1ff097eb392d694732e3f2f9}{
+\index{hokuyo.c@{hokuyo.c}!endchar@{endchar}}
+\index{endchar@{endchar}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{endchar}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf endchar}\mbox{[}4\mbox{]} = \char`\"{}000$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_a43e93cbb1ff097eb392d694732e3f2f9}
+\hypertarget{hokuyo_8c_a63e3e8ecdfed693b86dca2408ada45d8}{
+\index{hokuyo.c@{hokuyo.c}!endstep@{endstep}}
+\index{endstep@{endstep}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{endstep}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf endstep} = 0}}
+\label{hokuyo_8c_a63e3e8ecdfed693b86dca2408ada45d8}
+\hypertarget{hokuyo_8c_a450b03a1f336bc187d60ed1a185c2642}{
+\index{hokuyo.c@{hokuyo.c}!mdreturn@{mdreturn}}
+\index{mdreturn@{mdreturn}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{mdreturn}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf mdreturn}\mbox{[}19\mbox{]} = \char`\"{}000000000000000000$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_a450b03a1f336bc187d60ed1a185c2642}
+\hypertarget{hokuyo_8c_a555a4e538609bbbef3895dec89ca3155}{
+\index{hokuyo.c@{hokuyo.c}!numscanchar@{numscanchar}}
+\index{numscanchar@{numscanchar}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{numscanchar}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf numscanchar}\mbox{[}2\mbox{]} = \char`\"{}0$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_a555a4e538609bbbef3895dec89ca3155}
+\hypertarget{hokuyo_8c_a8bdd0479fd67506cc7fc20f09a7ee1c2}{
+\index{hokuyo.c@{hokuyo.c}!numscans@{numscans}}
+\index{numscans@{numscans}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{numscans}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf numscans} = 0}}
+\label{hokuyo_8c_a8bdd0479fd67506cc7fc20f09a7ee1c2}
+\hypertarget{hokuyo_8c_af0c72bcb3d9f140bff2177c6f10f3054}{
+\index{hokuyo.c@{hokuyo.c}!qtreturn@{qtreturn}}
+\index{qtreturn@{qtreturn}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{qtreturn}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf qtreturn}\mbox{[}6\mbox{]} = \char`\"{}00000$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_af0c72bcb3d9f140bff2177c6f10f3054}
+\hypertarget{hokuyo_8c_a0c756ab5870a4e7c86e449754e8b8ec9}{
+\index{hokuyo.c@{hokuyo.c}!rsreturn@{rsreturn}}
+\index{rsreturn@{rsreturn}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{rsreturn}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf rsreturn}\mbox{[}6\mbox{]} = \char`\"{}00000$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_a0c756ab5870a4e7c86e449754e8b8ec9}
+\hypertarget{hokuyo_8c_acd2d33d5d30e5fbce6b0933ab09fe00f}{
+\index{hokuyo.c@{hokuyo.c}!scanchar@{scanchar}}
+\index{scanchar@{scanchar}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{scanchar}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf scanchar}\mbox{[}1\mbox{]} = \char`\"{}$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_acd2d33d5d30e5fbce6b0933ab09fe00f}
+\hypertarget{hokuyo_8c_af2ddde5be5299be7006e46c38fd77976}{
+\index{hokuyo.c@{hokuyo.c}!scaninterval@{scaninterval}}
+\index{scaninterval@{scaninterval}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{scaninterval}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf scaninterval} = 0}}
+\label{hokuyo_8c_af2ddde5be5299be7006e46c38fd77976}
+\hypertarget{hokuyo_8c_a218b4f7c6cc2681a99c23a3b089d68b1}{
+\index{hokuyo.c@{hokuyo.c}!speed@{speed}}
+\index{speed@{speed}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{speed}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf speed} = 0}}
+\label{hokuyo_8c_a218b4f7c6cc2681a99c23a3b089d68b1}
+\hypertarget{hokuyo_8c_abedb79759f4a1a8a466ee3e564561bf6}{
+\index{hokuyo.c@{hokuyo.c}!speedchar@{speedchar}}
+\index{speedchar@{speedchar}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{speedchar}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf speedchar}\mbox{[}2\mbox{]} = \char`\"{}0$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_abedb79759f4a1a8a466ee3e564561bf6}
+\hypertarget{hokuyo_8c_aa4597990bc557a71b0be7aceb7ab7291}{
+\index{hokuyo.c@{hokuyo.c}!ssreturn@{ssreturn}}
+\index{ssreturn@{ssreturn}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{ssreturn}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf ssreturn}\mbox{[}6\mbox{]} = \char`\"{}00000$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_aa4597990bc557a71b0be7aceb7ab7291}
+\hypertarget{hokuyo_8c_aa3e0f985e26bacf2a08db25c238ed7aa}{
+\index{hokuyo.c@{hokuyo.c}!startchar@{startchar}}
+\index{startchar@{startchar}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{startchar}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf startchar}\mbox{[}4\mbox{]} = \char`\"{}000$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_aa3e0f985e26bacf2a08db25c238ed7aa}
+\hypertarget{hokuyo_8c_a937ebdcce0ae11e96ec89abe94db402c}{
+\index{hokuyo.c@{hokuyo.c}!startstep@{startstep}}
+\index{startstep@{startstep}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{startstep}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf startstep} = 0}}
+\label{hokuyo_8c_a937ebdcce0ae11e96ec89abe94db402c}
+\hypertarget{hokuyo_8c_a3df5a2c868b650e8cd18fb51e0d2da5c}{
+\index{hokuyo.c@{hokuyo.c}!statchar1@{statchar1}}
+\index{statchar1@{statchar1}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{statchar1}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf statchar1}}}
+\label{hokuyo_8c_a3df5a2c868b650e8cd18fb51e0d2da5c}
+\hypertarget{hokuyo_8c_a78e046077288f9c9dc7f9fa92d5a3ea0}{
+\index{hokuyo.c@{hokuyo.c}!statchar2@{statchar2}}
+\index{statchar2@{statchar2}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{statchar2}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf statchar2}}}
+\label{hokuyo_8c_a78e046077288f9c9dc7f9fa92d5a3ea0}
+\hypertarget{hokuyo_8c_a6e27f49150e9a14580fb313cc2777e00}{
+\index{hokuyo.c@{hokuyo.c}!status@{status}}
+\index{status@{status}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf status} = 0}}
+\label{hokuyo_8c_a6e27f49150e9a14580fb313cc2777e00}
+\hypertarget{hokuyo_8c_a69133069b26bc158a7a33d926d4513a1}{
+\index{hokuyo.c@{hokuyo.c}!statuschar@{statuschar}}
+\index{statuschar@{statuschar}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{statuschar}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf statuschar}\mbox{[}2\mbox{]} = \char`\"{}0$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_a69133069b26bc158a7a33d926d4513a1}
+\hypertarget{hokuyo_8c_a930b83edda39ee8cfa78dd4574a50bc3}{
+\index{hokuyo.c@{hokuyo.c}!sum@{sum}}
+\index{sum@{sum}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{sum}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf sum} = 0}}
+\label{hokuyo_8c_a930b83edda39ee8cfa78dd4574a50bc3}
+\hypertarget{hokuyo_8c_ad445763ce9fe285dae98adcb696fbdbe}{
+\index{hokuyo.c@{hokuyo.c}!sumchar@{sumchar}}
+\index{sumchar@{sumchar}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{sumchar}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf sumchar}\mbox{[}1\mbox{]} = \char`\"{}$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_ad445763ce9fe285dae98adcb696fbdbe}
+\hypertarget{hokuyo_8c_ac65844e11106dd509db7893f26918ba9}{
+\index{hokuyo.c@{hokuyo.c}!temp@{temp}}
+\index{temp@{temp}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{temp}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf temp}}}
+\label{hokuyo_8c_ac65844e11106dd509db7893f26918ba9}
+\hypertarget{hokuyo_8c_a84ed35d1d48dd6da374a496521c9dd5f}{
+\index{hokuyo.c@{hokuyo.c}!tempchar@{tempchar}}
+\index{tempchar@{tempchar}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{tempchar}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf tempchar}\mbox{[}1\mbox{]} = \char`\"{}$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_a84ed35d1d48dd6da374a496521c9dd5f}
+\hypertarget{hokuyo_8c_a0b56f665d3750b49cd468bec13ca511a}{
+\index{hokuyo.c@{hokuyo.c}!tm1return@{tm1return}}
+\index{tm1return@{tm1return}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{tm1return}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf tm1return}\mbox{[}12\mbox{]} = \char`\"{}00000000000$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_a0b56f665d3750b49cd468bec13ca511a}
+\hypertarget{hokuyo_8c_acc6a428b9aa31cad7d466090ccf17d25}{
+\index{hokuyo.c@{hokuyo.c}!tmreturn@{tmreturn}}
+\index{tmreturn@{tmreturn}!hokuyo.c@{hokuyo.c}}
+\subsubsection[{tmreturn}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf tmreturn}\mbox{[}6\mbox{]} = \char`\"{}00000$\backslash$n\char`\"{}}}
+\label{hokuyo_8c_acc6a428b9aa31cad7d466090ccf17d25}

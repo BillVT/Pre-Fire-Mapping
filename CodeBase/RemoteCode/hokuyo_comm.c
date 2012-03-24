@@ -1,6 +1,7 @@
 /* ********************************************************************** */
 /*                      Pre-Fire Mapping System                           */
 /*                   Hokuyo LIDAR Communication Code                      */
+/*                            Remote Unit                                 */
 /*                                                                        */
 /* Authors : William Etter (MSE '11)                                      */
 /*                                                                        */
@@ -87,10 +88,8 @@
 /* ****************************************************************************** */
 /* ****************************** Includes ************************************** */
 /* ****************************************************************************** */
-#ifndef GUARD
-	#define GUARD
-	#include "prefiremapping.h"
-#endif
+#include "prefiremapping.h"
+#include "hokuyo_comm.h"
 
 char dataheader[26] = "0000000000000000000000000\n";
 uint32_t datanum;

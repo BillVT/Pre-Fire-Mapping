@@ -1,0 +1,172 @@
+\hypertarget{hokuyo__comm_8c}{
+\section{RemoteCode/hokuyo\_\-comm.c File Reference}
+\label{hokuyo__comm_8c}\index{RemoteCode/hokuyo\_\-comm.c@{RemoteCode/hokuyo\_\-comm.c}}
+}
+{\ttfamily \#include \char`\"{}prefiremapping.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}hokuyo\_\-comm.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{hokuyo__comm_8c_aa619e9f0b76b7244e22693e5778c8c2a}{twocharEncode} (uint16\_\-t input, char $\ast$output)
+\item 
+void \hyperlink{hokuyo__comm_8c_af2dc3e1d628df24fdc89e7266156d68c}{twocharDecode} (char $\ast$input, uint16\_\-t $\ast$output)
+\item 
+void \hyperlink{hokuyo__comm_8c_a6cee44b850ad5d8ba35daf85d057a004}{threecharEncode} (uint16\_\-t input, char $\ast$output)
+\item 
+void \hyperlink{hokuyo__comm_8c_ae658773cc2abf6101a9ed1ae753666fd}{threecharDecode} (char $\ast$input, uint16\_\-t $\ast$output)
+\item 
+void \hyperlink{hokuyo__comm_8c_ae79b2376729aa11d35d56e387de0fde5}{fourcharEncode} (uint32\_\-t input, char $\ast$output)
+\item 
+void \hyperlink{hokuyo__comm_8c_ac366de5712064c47aa49caeeb230f56b}{fourcharDecode} (char $\ast$input, uint32\_\-t $\ast$output)
+\item 
+uint8\_\-t \hyperlink{hokuyo__comm_8c_a48beda652b3891256a1111b75aac0ad3}{checkSum} (char $\ast$input, int length)
+\item 
+uint8\_\-t \hyperlink{hokuyo__comm_8c_a3ee80042e7f6973cd563ec5f611a90ab}{commandNumber} (char $\ast$input)
+\item 
+int \hyperlink{hokuyo__comm_8c_a727949da4745e4762393eb6da7294447}{computeTime} (char $\ast$input)
+\item 
+void \hyperlink{hokuyo__comm_8c_ab26bf04278b9ee7f3aeffe52e05b9091}{readData} (uint8\_\-t encoding, uint32\_\-t \hyperlink{hokuyo_8c_a937ebdcce0ae11e96ec89abe94db402c}{startstep}, uint32\_\-t \hyperlink{hokuyo_8c_a63e3e8ecdfed693b86dca2408ada45d8}{endstep}, uint32\_\-t cluster, uint32\_\-t \hyperlink{hokuyo_8c_af2ddde5be5299be7006e46c38fd77976}{scaninterval}, FILE $\ast$filedescriptor)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{hokuyo__comm_8c_a4365deae80d6c9c6686db2c8e25efbc8}{dataheader} \mbox{[}26\mbox{]} = \char`\"{}0000000000000000000000000$\backslash$n\char`\"{}
+\item 
+uint32\_\-t \hyperlink{hokuyo__comm_8c_a20500c75dfaa03877a8f9a15ebd8b6c3}{datanum}
+\item 
+uint32\_\-t \hyperlink{hokuyo__comm_8c_aa8b51cbeda0cedbded8f658a1dca8242}{datablocks}
+\item 
+uint32\_\-t \hyperlink{hokuyo__comm_8c_abd9690b7e007d3fb8de16b9207267147}{remaining}
+\item 
+size\_\-t \hyperlink{hokuyo__comm_8c_ac65844e11106dd509db7893f26918ba9}{temp}
+\item 
+char \hyperlink{hokuyo__comm_8c_a4144ee44a99e17be7178b42abe8a4af8}{mainblock} \mbox{[}64\mbox{]}
+\item 
+char \hyperlink{hokuyo__comm_8c_abddbf265aba78281ec9e67f72247c2a8}{remblock} \mbox{[}64\mbox{]}
+\item 
+char \hyperlink{hokuyo__comm_8c_a05b5f8a522e2c39b98a6a13c1be11713}{remainingblock} \mbox{[}REMBLOCK\mbox{]}
+\item 
+char \hyperlink{hokuyo__comm_8c_a9b7ba2648e49db530f6f66a651d549b2}{csum} \mbox{[}1\mbox{]}
+\item 
+char \hyperlink{hokuyo__comm_8c_aae5b5ab3b4df05d0480ef3332ba8846a}{chartemp} \mbox{[}64\mbox{]}
+\item 
+uint8\_\-t \hyperlink{hokuyo__comm_8c_a59eac9627282a484fbaf0aa7aa3b8a9a}{checksum}
+\item 
+int \hyperlink{hokuyo__comm_8c_acb559820d9ca11295b4500f179ef6392}{i}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{hokuyo__comm_8c_a48beda652b3891256a1111b75aac0ad3}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!checkSum@{checkSum}}
+\index{checkSum@{checkSum}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{checkSum}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t checkSum (char $\ast$ {\em input}, \/  int {\em length})}}
+\label{hokuyo__comm_8c_a48beda652b3891256a1111b75aac0ad3}
+\hypertarget{hokuyo__comm_8c_a3ee80042e7f6973cd563ec5f611a90ab}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!commandNumber@{commandNumber}}
+\index{commandNumber@{commandNumber}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{commandNumber}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t commandNumber (char $\ast$ {\em input})}}
+\label{hokuyo__comm_8c_a3ee80042e7f6973cd563ec5f611a90ab}
+\hypertarget{hokuyo__comm_8c_a727949da4745e4762393eb6da7294447}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!computeTime@{computeTime}}
+\index{computeTime@{computeTime}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{computeTime}]{\setlength{\rightskip}{0pt plus 5cm}int computeTime (char $\ast$ {\em input})}}
+\label{hokuyo__comm_8c_a727949da4745e4762393eb6da7294447}
+\hypertarget{hokuyo__comm_8c_ac366de5712064c47aa49caeeb230f56b}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!fourcharDecode@{fourcharDecode}}
+\index{fourcharDecode@{fourcharDecode}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{fourcharDecode}]{\setlength{\rightskip}{0pt plus 5cm}void fourcharDecode (char $\ast$ {\em input}, \/  uint32\_\-t $\ast$ {\em output})}}
+\label{hokuyo__comm_8c_ac366de5712064c47aa49caeeb230f56b}
+\hypertarget{hokuyo__comm_8c_ae79b2376729aa11d35d56e387de0fde5}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!fourcharEncode@{fourcharEncode}}
+\index{fourcharEncode@{fourcharEncode}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{fourcharEncode}]{\setlength{\rightskip}{0pt plus 5cm}void fourcharEncode (uint32\_\-t {\em input}, \/  char $\ast$ {\em output})}}
+\label{hokuyo__comm_8c_ae79b2376729aa11d35d56e387de0fde5}
+\hypertarget{hokuyo__comm_8c_ab26bf04278b9ee7f3aeffe52e05b9091}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!readData@{readData}}
+\index{readData@{readData}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{readData}]{\setlength{\rightskip}{0pt plus 5cm}void readData (uint8\_\-t {\em encoding}, \/  uint32\_\-t {\em startstep}, \/  uint32\_\-t {\em endstep}, \/  uint32\_\-t {\em cluster}, \/  uint32\_\-t {\em scaninterval}, \/  FILE $\ast$ {\em filedescriptor})}}
+\label{hokuyo__comm_8c_ab26bf04278b9ee7f3aeffe52e05b9091}
+\hypertarget{hokuyo__comm_8c_ae658773cc2abf6101a9ed1ae753666fd}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!threecharDecode@{threecharDecode}}
+\index{threecharDecode@{threecharDecode}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{threecharDecode}]{\setlength{\rightskip}{0pt plus 5cm}void threecharDecode (char $\ast$ {\em input}, \/  uint16\_\-t $\ast$ {\em output})}}
+\label{hokuyo__comm_8c_ae658773cc2abf6101a9ed1ae753666fd}
+\hypertarget{hokuyo__comm_8c_a6cee44b850ad5d8ba35daf85d057a004}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!threecharEncode@{threecharEncode}}
+\index{threecharEncode@{threecharEncode}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{threecharEncode}]{\setlength{\rightskip}{0pt plus 5cm}void threecharEncode (uint16\_\-t {\em input}, \/  char $\ast$ {\em output})}}
+\label{hokuyo__comm_8c_a6cee44b850ad5d8ba35daf85d057a004}
+\hypertarget{hokuyo__comm_8c_af2dc3e1d628df24fdc89e7266156d68c}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!twocharDecode@{twocharDecode}}
+\index{twocharDecode@{twocharDecode}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{twocharDecode}]{\setlength{\rightskip}{0pt plus 5cm}void twocharDecode (char $\ast$ {\em input}, \/  uint16\_\-t $\ast$ {\em output})}}
+\label{hokuyo__comm_8c_af2dc3e1d628df24fdc89e7266156d68c}
+\hypertarget{hokuyo__comm_8c_aa619e9f0b76b7244e22693e5778c8c2a}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!twocharEncode@{twocharEncode}}
+\index{twocharEncode@{twocharEncode}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{twocharEncode}]{\setlength{\rightskip}{0pt plus 5cm}void twocharEncode (uint16\_\-t {\em input}, \/  char $\ast$ {\em output})}}
+\label{hokuyo__comm_8c_aa619e9f0b76b7244e22693e5778c8c2a}
+
+
+\subsection{Variable Documentation}
+\hypertarget{hokuyo__comm_8c_aae5b5ab3b4df05d0480ef3332ba8846a}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!chartemp@{chartemp}}
+\index{chartemp@{chartemp}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{chartemp}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf chartemp}\mbox{[}64\mbox{]}}}
+\label{hokuyo__comm_8c_aae5b5ab3b4df05d0480ef3332ba8846a}
+\hypertarget{hokuyo__comm_8c_a59eac9627282a484fbaf0aa7aa3b8a9a}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!checksum@{checksum}}
+\index{checksum@{checksum}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{checksum}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf checksum}}}
+\label{hokuyo__comm_8c_a59eac9627282a484fbaf0aa7aa3b8a9a}
+\hypertarget{hokuyo__comm_8c_a9b7ba2648e49db530f6f66a651d549b2}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!csum@{csum}}
+\index{csum@{csum}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{csum}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf csum}\mbox{[}1\mbox{]}}}
+\label{hokuyo__comm_8c_a9b7ba2648e49db530f6f66a651d549b2}
+\hypertarget{hokuyo__comm_8c_aa8b51cbeda0cedbded8f658a1dca8242}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!datablocks@{datablocks}}
+\index{datablocks@{datablocks}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{datablocks}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf datablocks}}}
+\label{hokuyo__comm_8c_aa8b51cbeda0cedbded8f658a1dca8242}
+\hypertarget{hokuyo__comm_8c_a4365deae80d6c9c6686db2c8e25efbc8}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!dataheader@{dataheader}}
+\index{dataheader@{dataheader}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{dataheader}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf dataheader}\mbox{[}26\mbox{]} = \char`\"{}0000000000000000000000000$\backslash$n\char`\"{}}}
+\label{hokuyo__comm_8c_a4365deae80d6c9c6686db2c8e25efbc8}
+\hypertarget{hokuyo__comm_8c_a20500c75dfaa03877a8f9a15ebd8b6c3}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!datanum@{datanum}}
+\index{datanum@{datanum}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{datanum}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf datanum}}}
+\label{hokuyo__comm_8c_a20500c75dfaa03877a8f9a15ebd8b6c3}
+\hypertarget{hokuyo__comm_8c_acb559820d9ca11295b4500f179ef6392}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!i@{i}}
+\index{i@{i}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{i}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf i}}}
+\label{hokuyo__comm_8c_acb559820d9ca11295b4500f179ef6392}
+\hypertarget{hokuyo__comm_8c_a4144ee44a99e17be7178b42abe8a4af8}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!mainblock@{mainblock}}
+\index{mainblock@{mainblock}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{mainblock}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf mainblock}\mbox{[}64\mbox{]}}}
+\label{hokuyo__comm_8c_a4144ee44a99e17be7178b42abe8a4af8}
+\hypertarget{hokuyo__comm_8c_abd9690b7e007d3fb8de16b9207267147}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!remaining@{remaining}}
+\index{remaining@{remaining}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{remaining}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf remaining}}}
+\label{hokuyo__comm_8c_abd9690b7e007d3fb8de16b9207267147}
+\hypertarget{hokuyo__comm_8c_a05b5f8a522e2c39b98a6a13c1be11713}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!remainingblock@{remainingblock}}
+\index{remainingblock@{remainingblock}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{remainingblock}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf remainingblock}\mbox{[}REMBLOCK\mbox{]}}}
+\label{hokuyo__comm_8c_a05b5f8a522e2c39b98a6a13c1be11713}
+\hypertarget{hokuyo__comm_8c_abddbf265aba78281ec9e67f72247c2a8}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!remblock@{remblock}}
+\index{remblock@{remblock}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{remblock}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf remblock}\mbox{[}64\mbox{]}}}
+\label{hokuyo__comm_8c_abddbf265aba78281ec9e67f72247c2a8}
+\hypertarget{hokuyo__comm_8c_ac65844e11106dd509db7893f26918ba9}{
+\index{hokuyo\_\-comm.c@{hokuyo\_\-comm.c}!temp@{temp}}
+\index{temp@{temp}!hokuyo_comm.c@{hokuyo\_\-comm.c}}
+\subsubsection[{temp}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf temp}}}
+\label{hokuyo__comm_8c_ac65844e11106dd509db7893f26918ba9}

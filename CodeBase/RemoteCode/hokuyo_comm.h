@@ -1,6 +1,7 @@
 /* ********************************************************************** */
 /*                      Pre-Fire Mapping System                           */
 /*               Hokuyo LIDAR Communication Code Header                   */
+/*                            Remote Unit                                 */
 /*                                                                        */
 /* Authors : William Etter (MSE '11)                                      */
 /*                                                                        */
@@ -11,14 +12,13 @@
 /* Hardware : Hoyuko Laser RangeFinder, Pandaboard                        */
 /* Copyright William Etter 2011 (Etterw@seas.upenn.edu)                   */
 /* ********************************************************************** */
+#ifndef _HOKUYO_COMM_H_
+#define _HOKUYO_COMM_H_
 
 /* ****************************************************************************** */
 /* ****************************** Includes ************************************** */
 /* ****************************************************************************** */
-#ifndef GUARD
-	#define GUARD
-	#include "prefiremapping.h"
-#endif
+
 
 
 /* ****************************************************************************** */
@@ -105,8 +105,9 @@ Function: readData()
 Purpose:  Computes the LIDAR sensor data
 Input:    Encoding, StartStep, EndStep, Cluster, ScanInterval, Device to Read From
 **************************************************************************/
-void readData(uint8_t encoding, int startstep, int endstep, int cluster, int scaninterval, FILE * filedescriptor);
+void readData(uint8_t encoding, uint32_t startstep, uint32_t endstep, uint32_t cluster, uint32_t scaninterval, FILE * filedescriptor);
 
+#endif
 /* ****************************************************************************** */
 // End of HOKUYO_COMM.H
 /* ****************************************************************************** */

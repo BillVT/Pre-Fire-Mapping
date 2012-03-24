@@ -1,0 +1,63 @@
+\begin{DoxyAuthor}{Authors}
+William Etter (MSE '11)
+\end{DoxyAuthor}
+
+
+\hypertarget{index_intro}{}\section{Introduction}\label{index_intro}
+This system utilizes a Hokuyo LIDAR Laser Rangefinder mounted on a handheld unit to scan a location and save the data to a flashdrive. This data is then uploaded to the base station where the SLAM algorithm (run in ROS -\/ Robot Operating System). From here the scanned area (rooms, floors, buildings) can be visualized and input to other programs such as 3D modelings and building databases.\hypertarget{index_components}{}\section{Components}\label{index_components}
+This system utilzies the following subsystems and components:
+
+
+\begin{DoxyItemize}
+\item Remote System (Handheld Scanning Unit):
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item \href{http://www.hokuyo-aut.jp/02sensor/07scanner/urg_04lx.html}{\tt Hokuyo URG-\/04LX-\/UG01(Simple-\/URG) }
+\item \href{http://beagleboard.org/bone}{\tt BeagleBone } (Low-\/cost, fan-\/less single board computer) with custom Linux install
+\item \href{http://www.chrobotics.com/index.php?main_page=product_info&products_id=2CHRobotics}{\tt CHR-\/6dm Inertial Measurement Unit }
+\item \href{http://www.4dsystems.com.au/prod.php?id=114}{\tt 4D uLCD-\/32PTGFX } 3.2inch TFT Touchscreen LCD Display
+\item \href{http://www.newegg.com/Product/Product.aspx?Item=N82E16817394106}{\tt Belkin 4-\/Port USB Hub }
+\item \href{www.sparkfun.com/products/9718}{\tt 2x FTDI Cables }
+\item \href{http://www.castlecreations.com/products/ccbec.html}{\tt Castle Creations 5V 10A BEC } (Voltage Regulator)
+\item Portable Flash Drive
+\item Lithium-\/Polymer Battery
+\end{DoxyEnumerate}
+
+
+\begin{DoxyItemize}
+\item Base System
+\end{DoxyItemize}
+
+
+
+\hypertarget{index_website}{}\section{Project Website:}\label{index_website}
+\href{http://williametter.com/portfolio/projects/pre-fire-mapping-system/}{\tt Pre-\/Fire-\/Mapping System }
+
+
+
+ \hypertarget{index_notes}{}\section{Release.Notes}\label{index_notes}
+
+\begin{DoxyItemize}
+\item Release Note \#1
+\end{DoxyItemize}
+
+
+
+
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000001}{Todo}]Complete LIDAR API 
+
+Determine LIDAR data save format for .bag file in ROS 
+
+Implement LCD Screen 
+
+Implement IMU System\end{Desc}
+
+
+\hypertarget{index_install_sec}{}\section{Installation}\label{index_install_sec}
+\hypertarget{index_step1}{}\subsection{Step 1: Installing Custom Linux onto BeagleBone}\label{index_step1}
+
+\begin{DoxyEnumerate}
+\item Download files from Project Repository 
+\end{DoxyEnumerate}

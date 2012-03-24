@@ -1,6 +1,7 @@
 /* ********************************************************************** */
 /*                      Pre-Fire Mapping System                           */
 /*                        Hokuyo LIDAR Code                               */
+/*                            Remote Unit                                 */
 /*                                                                        */
 /* Authors : William Etter (MSE '11)                                      */
 /*                                                                        */
@@ -152,12 +153,8 @@
 /* ****************************************************************************** */
 /* ****************************** Includes ************************************** */
 /* ****************************************************************************** */
-#ifndef GUARD
-	#define GUARD
-	#include "prefiremapping.h"
-#endif
-
-#include "hokuyo_comm.h"
+#include "prefiremapping.h"
+#include "hokuyo.h"
 
 /* ****************************************************************************** */
 /* ****************************** Variables ************************************* */
@@ -203,12 +200,18 @@ char statchar2;
 /* ****************************** Functions ************************************* */
 /* ****************************************************************************** */
 
-/*************************************************************************
-Function: lidar_open()
-Purpose:  Opens LIDAR Communication and flushes buffer
-Input:    Device name to open 
-Returns:  File Descriptor (FD) if successful, -1 if not
-**************************************************************************/
+/********************************************//**
+ *  Function: lidar_open()
+ *  Purpose:  Opens LIDAR Communication and flushes buffer
+ *  Input:    Device name to open
+ *  Returns:  File Descriptor (FD) if successful, -1 if not
+ ***********************************************/
+/*! \brief Move a chess piece
+ * Precondition: it's the owner's turn and the move is valid.
+ * Postcondition: the piece will be moved.
+ * \param x New x square
+ * \param y New y square
+ * \return Whether the move has been performed */
 FILE * lidar_open(char * name){
 	if(DEBUGGING_MODE == 1 || LIDAR_OPEN == 1){
 		printf("***In Debugging Mode - Not Opening LIDAR***\n");

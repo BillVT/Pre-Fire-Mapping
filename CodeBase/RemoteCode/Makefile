@@ -27,4 +27,4 @@ prefiremapping: $(SOURCES)
 	$(CC) $(CFLAGS) $(SOURCES) -o $(PROGN)
 
 clean :
-	rm ./$(PROGN)
+	rm -f ./$(PROGN)
