@@ -1,0 +1,41 @@
+Pre-Fire-Mapping System
+Version 1.0
+
+Authors:
+    William Etter (MSE '11)
+
+Introduction:
+This system utilizes a Hokuyo LIDAR Laser Rangefinder mounted on a handheld unit to scan a location and save the data to a flashdrive. This data is then uploaded to the base station where the SLAM algorithm (run in ROS - Robot Operating System). From here the scanned area (rooms, floors, buildings) can be visualized and input to other programs such as 3D modelings and building databases.
+Components
+
+This system utilzies the following subsystems and components:
+    Remote System (Handheld Scanning Unit):
+    -Hokuyo URG-04LX-UG01(Simple-URG)
+    -BeagleBone (Low-cost, fan-less single board computer) with custom Linux install
+    -CHR-6dm Inertial Measurement Unit
+    -4D uLCD-32PTGFX 3.2" TFT Touchscreen LCD Display
+    -Belkin 4-Port USB Hub
+    -Portable Flash Drive
+    -2x FTDI Cables
+    -CastleCreations 5V 10A Voltage Regulator
+    -Portable Flash Drive
+    -Lithium-Polymer Battery
+
+    Base System
+
+Project Website: http://williametter.com/portfolio/projects/pre-fire-mapping-system/
+
+Todo:
+    Complete LIDAR API
+
+    Determine LIDAR data save format for .bag file in ROS
+
+    Implement LCD Screen
+
+    Implement IMU System
+
+
+
+Installation
+Step 1: Installing Custom Linux onto BeagleBone
+
