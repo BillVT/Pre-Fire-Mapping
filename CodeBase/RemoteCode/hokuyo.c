@@ -209,9 +209,8 @@ char statchar2;
 /*! \brief Move a chess piece
  * Precondition: it's the owner's turn and the move is valid.
  * Postcondition: the piece will be moved.
- * \param x New x square
- * \param y New y square
- * \return Whether the move has been performed */
+ * \param name Device name to open
+ * \return File Descriptor (FD) if successful, -1 if not */
 FILE * lidar_open(char * name){
 	if(DEBUGGING_MODE == 1 || LIDAR_OPEN == 1){
 		printf("***In Debugging Mode - Not Opening LIDAR***\n");
