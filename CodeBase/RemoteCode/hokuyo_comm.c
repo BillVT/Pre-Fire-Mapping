@@ -7,9 +7,9 @@
 /*                                                                        */
 /*                      University of Pennsylvania                        */
 /* mLab - Real-Time Embedded Systems Laboratory                           */
-/* Date : September  30, 2011                                             */
+/* Date : March 23, 2011                                                  */
 /* Version : 1.0                                                          */
-/* Hardware : Hoyuko Laser RangeFinder, Pandaboard                        */
+/* Hardware : Hoyuko Laser RangeFinder, BeagleBone, CHRobotics IMU        */
 /* Copyright William Etter 2011 (Etterw@seas.upenn.edu)                   */
 /* ********************************************************************** */
 

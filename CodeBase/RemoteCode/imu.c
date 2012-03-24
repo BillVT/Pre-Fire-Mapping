@@ -1,6 +1,6 @@
 /* ********************************************************************** */
 /*                      Pre-Fire Mapping System                           */
-/*                        Hokuyo LIDAR Code                               */
+/*                             IMU Code                                   */
 /*                            Remote Unit                                 */
 /*                                                                        */
 /* Authors : William Etter (MSE '11)                                      */
